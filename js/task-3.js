@@ -1,8 +1,8 @@
 'use strict';
 const profile = {
-    username: `Player1`,
-    playTime: 0,
-    changeUserName (newName){
+    username: `Jacob`,
+    playTime: 300,
+    changeUsername (newName){
         this.username = newName;
     },
     updatePlayTime (hours){
@@ -12,9 +12,10 @@ const profile = {
         return `Username: ${this.username}, Playtime: ${this.playTime} hours`;  
     }
 }
-console.log(profile.getInfo()); // Username: Player1, Play time: 0 hours
+console.log(profile.getInfo()); // "Jacob has 300 active hours!"
 
-profile.changeUsername('ShadowHunter');
-profile.updatePlayTime(5);
+profile.changeUsername("Marco");
+console.log(profile.getInfo()); // "Marco has 300 active hours!"
 
-console.log(profile.getInfo()); // Username: ShadowHunter, Play time: 5 hours
+profile.updatePlayTime(20);
+console.log(profile.getInfo()); // "Marco has 320 active hours!"
